@@ -3,70 +3,41 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>С Днем Рождения, Кристина!</title>
+  <title>Поздравление для Кристины</title>
   <style>
     body {
-      font-family: 'Arial', sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #fce4ec;
+      background-color: #FFDB8B;
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
-      color: #ff4081;
-      text-align: center;
-      overflow: hidden;
     }
     .card {
-      background: #ffffff;
-      border-radius: 20px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-      width: 90%;
-      max-width: 400px;
-      padding: 30px;
-      transform: scale(0.8);
-      animation: zoomIn 0.5s forwards;
+      width: 80%;
+      max-width: 350px;
+      height: 100%;
+      background-color: #1E1E1E;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 0;
     }
-    h1 {
-      font-size: 32px;
-      margin: 0;
-      animation: fadeIn 1s ease-out;
+    .card img {
+      max-width: 90%;
+      height: auto;
     }
-    p {
-      font-size: 18px;
-      color: #333;
-      margin-top: 10px;
-      animation: fadeIn 2s ease-out;
-    }
-    .happy-birthday {
-      color: #ff4081;
-      font-weight: bold;
-      font-size: 50px;
-      margin-bottom: 20px;
-      animation: bounceIn 1.5s ease-out;
-    }
-    @keyframes fadeIn {
-      0% { opacity: 0; }
-      100% { opacity: 1; }
-    }
-    @keyframes bounceIn {
-      0% { transform: scale(0); }
-      60% { transform: scale(1.2); }
-      100% { transform: scale(1); }
-    }
-    @keyframes zoomIn {
-      0% { transform: scale(0.8); }
-      100% { transform: scale(1); }
+    .card img:first-child {
+      margin-top: 20px; /* Отступ сверху для первой картинки */
     }
   </style>
 </head>
 <body>
   <div class="card">
-    <div class="happy-birthday">С Днем Рождения!</div>
-    <h1>Кристина!</h1>
-    <p>Желаю тебе всегда оставаться такой же яркой, красивой и невероятной! Пусть каждый день приносит тебе только счастье и радость!</p>
-    <p>С любовью, твой друг.</p>
+    <img src="HappyBirthday.jpg" alt="Happy Birthday">
+    <img src="Cake.png" alt="Cake">
   </div>
 </body>
 </html>
