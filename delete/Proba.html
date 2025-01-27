@@ -7,57 +7,131 @@
     <style>
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
-            background: linear-gradient(to bottom, #FFFBF0, #FFD6BA);
-            color: #4A403A;
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+            color: #333;
             text-align: center;
-            padding: 0 1rem;
+            padding: 0;
+            overflow-x: hidden;
         }
 
         header {
-            padding: 1.5rem 0;
-            background-color: #FFF5E1;
+            padding: 2rem 1rem;
+            background-color: #2196f3;
+            color: #fff;
             border-radius: 0 0 20px 20px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
         header h1 {
-            font-size: 2rem;
-            color: #D17A22;
+            font-size: 2.5rem;
             margin: 0;
+            font-weight: 700;
         }
 
         .message {
-            margin: 2rem 0;
-            font-size: 1.2rem;
-            line-height: 1.6;
+            margin: 2rem 1rem;
+            font-size: 1.5rem;
+            line-height: 1.8;
+            color: #444;
+            background: #f3f4f6;
+            padding: 1.5rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
         .gallery {
             display: grid;
-            gap: 1rem;
-            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-            padding: 0 0 2rem;
+            gap: 1.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            padding: 1rem;
         }
 
         .gallery img {
             width: 100%;
-            border-radius: 15px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            transform: scale(0.9);
+            animation: fadeIn 1s ease forwards;
+        }
+
+        .gallery img:nth-child(1) {
+            animation-delay: 0.2s;
+        }
+
+        .gallery img:nth-child(2) {
+            animation-delay: 0.4s;
+        }
+
+        .gallery img:nth-child(3) {
+            animation-delay: 0.6s;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .gif-container {
+            position: relative;
+            margin-top: 1rem;
+        }
+
+        .gif-container img {
+            position: absolute;
+            width: 60px;
+            height: 60px;
+        }
+
+        .gif-container .gif1 {
+            top: -10px;
+            left: 10%;
+        }
+
+        .gif-container .gif2 {
+            top: -10px;
+            right: 10%;
         }
 
         footer {
-            padding: 1rem;
-            background-color: #FFF5E1;
+            padding: 1.5rem 1rem;
+            background-color: #2196f3;
+            color: #fff;
             border-radius: 20px 20px 0 0;
             box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
             margin-top: 2rem;
         }
 
         footer p {
-            font-size: 1rem;
-            color: #D17A22;
+            font-size: 1.2rem;
             margin: 0;
+            font-weight: 500;
+        }
+
+        audio {
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            .message {
+                font-size: 1.2rem;
+            }
+
+            footer p {
+                font-size: 1rem;
+            }
+
+            .gif-container img {
+                width: 40px;
+                height: 40px;
+            }
         }
     </style>
 </head>
@@ -67,7 +141,7 @@
     </header>
 
     <div class="message">
-        <p>Мы очень любим тебя и желаем скорейшего выздоровления. Помни, что мы тебя очень любим!</p>
+        <p>Мы очень любим тебя и желаем скорейшего выздоровления. Пусть этот день будет полон тепла и радости, как наше сердце для тебя!</p>
     </div>
 
     <div class="gallery">
@@ -75,6 +149,16 @@
         <img src="Image2.jpg" alt="Счастливая семья">
         <img src="Image3.jpg" alt="Кошка улыбается">
     </div>
+
+    <div class="gif-container">
+        <img class="gif1" src="gif1.gif" alt="Украшение 1">
+        <img class="gif2" src="gif2.gif" alt="Украшение 2">
+    </div>
+
+    <audio controls>
+        <source src="Song.mp3" type="audio/mpeg">
+        Ваш браузер не поддерживает аудио.
+    </audio>
 
     <footer>
         <p>С любовью, твои дети ❤️</p>
