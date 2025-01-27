@@ -11,22 +11,24 @@
       background-color: #FFDB8B;
       display: flex;
       justify-content: center;
-      align-items: center;
+      align-items: flex-start;
       height: 100vh;
+      overflow-y: auto; /* Добавлен скроллинг */
     }
     .card {
       width: 80%;
       max-width: 350px;
-      height: 100%;
       background-color: #1E1E1E;
       background-image: url("Confetti.gif");
       background-size: cover;
       background-position: center;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
+      justify-content: flex-start;
       align-items: center;
       padding: 20px 0;
+      border-radius: 10px;
+      margin-bottom: 20px;
     }
     .card img {
       max-width: 90%;
@@ -40,12 +42,41 @@
       animation-delay: 0.3s;
     }
     .card img:nth-child(2) { /* Фото именинницы */
+      margin-top: 10px; /* Отступ между картинками */
       animation-delay: 0.6s;
       border-radius: 10px;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     }
-    .card img:last-child {
+    .card img:nth-child(3), .card img:nth-child(5) { /* Стрелки */
+      margin-top: 20px;
+      animation-delay: 0.9s;
+      width: 50px; /* Фиксированный размер стрелки */
+      height: auto;
+    }
+    .card img:nth-child(5) {
+      animation-delay: 1.2s; /* Задержка для второй стрелки */
+    }
+    .card .message {
+      color: #FFE653;
+      font-size: 24px;
+      font-weight: bold;
+      text-align: center;
+      margin: 20px 0;
+      opacity: 0;
+      animation: fadeIn 1.5s ease forwards;
       animation-delay: 1s;
+    }
+    .card img:last-child { /* Фото торта */
+      margin-top: 20px;
+      animation-delay: 1.5s;
+    }
+    .card video {
+      max-width: 90%;
+      height: auto;
+      opacity: 0;
+      transform: scale(0.8);
+      animation: fadeIn 1.5s ease forwards;
+      margin-top: 20px;
     }
     @keyframes fadeIn {
       to {
@@ -59,9 +90,11 @@
   <div class="card">
     <img src="HappyBirthday.jpg" alt="Happy Birthday">
     <img src="Kristina1.png" alt="Именинница">
+    <video src="Video1.mp4" controls></video> <!-- Видео после фото Kristina1 -->
+    <img src="Strelka.png" alt="Стрелка вниз 1">
+    <div class="message">МЫ ТЕБЯ ЛЮБИМ!</div>
+    <img src="Strelka.png" alt="Стрелка вниз 2">
     <img src="Cake.png" alt="Cake">
   </div>
 </body>
 </html>
-
-
