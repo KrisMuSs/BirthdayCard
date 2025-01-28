@@ -8,17 +8,17 @@
     body {
       margin: 0;
       padding: 0;
-      background-color: #FFEEC8; /* Цвет фона */
+      background-color: #FFEEC8;
       display: flex;
       justify-content: center;
       align-items: flex-start;
       height: 100vh;
-      overflow-y: auto; /* Скроллинг */
+      overflow-y: auto;
     }
     .card {
       width: 80%;
       max-width: 350px;
-      background-color: #333333; /* Цвет прямоугольника */
+      background-color: #333333;
       background-image: url("Confetti.gif");
       background-size: cover;
       background-position: center;
@@ -44,11 +44,11 @@
     .line {
       width: 90%;
       height: 2px;
-      background-color: #FFEEC8; /* Тонкая линия цвета фона */
-      margin: 10px 0; /* Отступы сверху и снизу */
+      background-color: #FFEEC8;
+      margin: 10px 0;
     }
     .greeting {
-      color: #FDDA86; /* Цвет текста */
+      color: #FDDA86;
       font-size: 18px;
       font-weight: bold;
       text-align: center;
@@ -57,26 +57,25 @@
     }
     .divider {
       width: 100%;
-      height: 25px; /* Уменьшена высота разделителя */
-      background-color: #FFEEC8; /* Цвет разделителя */
-      margin-top: 5px; /* Уменьшен отступ сверху */
-      margin-bottom: 15px; /* Увеличен отступ снизу */
+      height: 25px;
+      background-color: #FFEEC8;
+      margin-top: 5px;
+      margin-bottom: 15px;
     }
-    .card img:nth-child(2) { /* Фото именинницы */
-      margin-top: 10px; /* Отступ между элементами */
+    .card img:nth-child(2) {
+      margin-top: 10px;
       animation-delay: 0.6s;
       border-radius: 10px;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-      
     }
-    .card img:nth-child(3), .card img:nth-child(5) { /* Стрелки */
+    .card img:nth-child(3), .card img:nth-child(5) {
       margin-top: 20px;
       animation-delay: 0.9s;
-      width: 50px; /* Размер стрелки */
+      width: 50px;
       height: auto;
     }
     .card img:nth-child(5) {
-      animation-delay: 1.2s; /* Задержка для второй стрелки */
+      animation-delay: 1.2s;
     }
     .card .message {
       color: #FFE653;
@@ -88,10 +87,9 @@
       animation: fadeIn 1.5s ease forwards;
       animation-delay: 1s;
     }
-    .card img:last-child { /* Фото торта */
+    .card img:last-child {
       margin-top: 20px;
       animation-delay: 1.5s;
-
     }
     .card video {
       max-width: 90%;
@@ -100,43 +98,50 @@
       transform: scale(0.8);
       animation: fadeIn 1.5s ease forwards;
       margin-top: 20px;
-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
       border-radius: 5px;
-
     }
     .card .links {
       display: flex;
-      justify-content: center; /* Центрируем содержимое */
-      align-items: center; /* Центрируем по вертикали */
+      justify-content: center;
+      align-items: center;
       width: 100%;
-      color: #333333; /* Цвет текста */
-      font-size: 15px; /* Уменьшен шрифт на 1px */
+      color: #333333;
+      font-size: 15px;
       font-weight: bold;
       margin-top: -10px;
-      padding: 5px 0; /* Уменьшенные отступы */
-      background-color: #FFEEC8; /* Цвет фона для ссылки */
-      white-space: nowrap; /* Ссылки остаются в одну строку */
-      overflow: visible; /* Позволяем тексту выходить за пределы */
+      padding: 5px 0;
+      background-color: #FFEEC8;
+      white-space: nowrap;
+      overflow: visible;
     }
     .card .links a {
       text-decoration: none;
-      color: #333333; /* Цвет текста */
-      padding: 5px 10px; /* Уменьшены отступы */
-      margin: 3px; /* Уменьшено расстояние между кнопками */
-      border-radius: 20px; /* Более округлая форма */
-      border: 2px solid white; /* Белая обводка */
+      color: #333333;
+      padding: 5px 10px;
+      margin: 3px;
+      border-radius: 20px;
+      border: 2px solid white;
       transition: background-color 0.3s, color 0.3s;
     }
     .card .links a:hover {
-      background-color: #FDDA86; /* Цвет фона при наведении */
-      color: white; /* Белый цвет текста при наведении */
+      background-color: #FDDA86;
+      color: white;
     }
     .card .links a.no-link {
-      pointer-events: none; /* Отключаем взаимодействие с ссылкой */
-      color: #333333; /* Ссылка остаётся того же цвета */
-      background-color: #cccccc; /* Серый фон для неактивной ссылки */
-      border: 2px solid #b3b3b3; /* Более темная граница для неактивной ссылки */
+      pointer-events: none;
+      color: #333333;
+      background-color: #cccccc;
+      border: 2px solid #b3b3b3;
     }
+
+    /* Добавление тени и округления углов для изображений Kristina1, Kristina2, Kristina3 */
+    .card img[src="Kristina1.png"], .card img[src="Kristina2.jpg"], .card img[src="Kristina3.jpg"] {
+      border-radius: 15px; /* Округление углов */
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Тень */
+      margin-top: 20px;
+    }
+
     @keyframes fadeIn {
       to {
         opacity: 1;
@@ -147,24 +152,26 @@ box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 </head>
 <body>
   <div class="card">
-    <img src="FontKristina.png" alt="Font Kristina"> <!-- Изображение FontKristina -->
+    <img src="FontKristina.png" alt="Font Kristina">
     <img src="HappyBirthday.jpg" alt="Happy Birthday">
-    <div class="line"></div> <!-- Тонкая линия под картинкой HappyBirthday -->
+    <div class="line"></div>
     <div class="greeting">
       С ДНЁМ РОЖДЕНИЯ, КРИСТИНА! ПУСТЬ ЖИЗНЬ БУДЕТ ВЕСЁЛОЙ И ЯРКОЙ! 🌟
     </div>
-    <div style="margin-top: 10px;"></div> <!-- Уменьшен отступ после greeting -->
-    <div class="divider"></div> <!-- Прямоугольник-разделитель с уменьшенным отступом сверху -->
+    <div style="margin-top: 10px;"></div>
+    <div class="divider"></div>
     <div class="links">
-      <a href="main.html" class="no-link">Главное</a> <!-- Сделано неосязаемым, но с тем же цветом -->
-      <a href="OneLink/View.html">Артем</a> <!-- Ссылка на файл View.html -->
-      <a href="SecondLink/View2.html">Света</a> <!-- Ссылка на файл View2.html -->
-      <a href="ThirdLink/View3.html">Паша</a> <!-- Ссылка на файл View3.html -->
-      <a href="FourthLink/View4.html">Родители</a> <!-- Ссылка на файл View4.html -->
-    </div> <!-- Ссылки для перехода на другие страницы -->
-    <video src="Video1.mp4" controls></video> <!-- Видео теперь выше -->
-    <img src="Kristina1.png" alt="Именинница" style="margin-top: 20px;"> <!-- Фото именинницы с отступом -->
-    <div style="margin-top: 20px;"></div> <!-- Отступ после фото именинницы -->
+      <a href="main.html" class="no-link">Главное</a>
+      <a href="OneLink/View.html">Артем</a>
+      <a href="SecondLink/View2.html">Света</a>
+      <a href="ThirdLink/View3.html">Паша</a>
+      <a href="FourthLink/View4.html">Родители</a>
+    </div>
+    <video src="Video1.mp4" controls></video>
+    <img src="Kristina1.png" alt="Kristina1">
+    <img src="Kristina2.jpg" alt="Kristina2">
+    <img src="Kristina3.jpg" alt="Kristina3">
+    <div style="margin-top: 20px;"></div>
     <img src="Strelka.png" alt="Стрелка вниз 1">
     <div class="message">МЫ ТЕБЯ ЛЮБИМ!</div>
     <img src="Strelka.png" alt="Стрелка вниз 2">
