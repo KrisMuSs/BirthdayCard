@@ -101,7 +101,8 @@
     }
     .card .links {
       display: flex;
-      justify-content: space-around;
+      justify-content: center; /* Центрируем содержимое */
+      align-items: center; /* Центрируем по вертикали */
       width: 100%;
       color: #333333; /* Цвет текста */
       font-size: 18px;
@@ -109,15 +110,22 @@
       margin-top: -10px;
       padding: 10px 0;
       background-color: #FFEEC8; /* Цвет фона для ссылки */
+      white-space: nowrap; /* Ссылки остаются в одну строку */
+      overflow: visible; /* Позволяем тексту выходить за пределы */
     }
     .card .links a {
       text-decoration: none;
       color: #333333; /* Цвет текста */
       padding: 5px;
+      margin: 5px; /* Отступы между ссылками */
       transition: color 0.3s;
     }
     .card .links a:hover {
       color: #FDDA86; /* Цвет при наведении */
+    }
+    .card .links a.no-link {
+      pointer-events: none; /* Отключаем взаимодействие с ссылкой */
+      color: #333333; /* Ссылка остаётся того же цвета */
     }
     @keyframes fadeIn {
       to {
@@ -138,11 +146,11 @@
     <div style="margin-top: 10px;"></div> <!-- Уменьшен отступ после greeting -->
     <div class="divider"></div> <!-- Прямоугольник-разделитель с уменьшенным отступом сверху -->
     <div class="links">
-      <a href="main.html">Главное</a> <!-- Ссылка на главное -->
+      <a href="main.html" class="no-link">Главное</a> <!-- Сделано неосязаемым, но с тем же цветом -->
       <a href="OneLink/View.html">Артем</a> <!-- Ссылка на файл View.html -->
-      <a href="sveta.html">Света</a>
-      <a href="pasha.html">Паша</a>
-      <a href="roditeli.html">Родители</a>
+      <a href="SecondLink/View2.html">Света</a> <!-- Ссылка на файл View2.html -->
+      <a href="ThirdLink/View3.html">Паша</a> <!-- Ссылка на файл View3.html -->
+      <a href="FourthLink/View4.html">Родители</a> <!-- Ссылка на файл View4.html -->
     </div> <!-- Ссылки для перехода на другие страницы -->
     <video src="Video1.mp4" controls></video> <!-- Видео теперь выше -->
     <img src="Kristina1.png" alt="Именинница" style="margin-top: 20px;"> <!-- Фото именинницы с отступом -->
