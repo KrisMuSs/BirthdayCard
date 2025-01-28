@@ -97,6 +97,12 @@
     .links a:hover {
       color: #FDDA86; /* Цвет при наведении */
     }
+    /* Добавляем стиль для неосязаемой ссылки */
+    .links a.disabled {
+      pointer-events: none; /* Отключает взаимодействие с ссылкой */
+      color: #333333; /* Цвет как у остальных ссылок */
+      /* Убираем opacity, чтобы ссылка не была полупрозрачной */
+    }
     @keyframes fadeIn {
       to {
         opacity: 1;
@@ -135,7 +141,7 @@
       <a href="OneLink/View.html">Артем</a> <!-- Ссылка на файл View.html -->
       <a href="../SecondLink/View2.html">Света</a> <!-- Ссылка на View2.html -->
       <a href="../ThirdLink/View3.html">Паша</a> <!-- Ссылка на View3.html -->
-      <a href="roditeli.html">Родители</a>
+      <a href="../FourthLink/View4.html" class="disabled">Родители</a> <!-- Ссылка "Родители" с классом disabled -->
     </div> <!-- Ссылки для перехода на другие страницы -->
     <video src="Video1.mp4" controls></video> <!-- Видео -->
     <div class="image-group">
