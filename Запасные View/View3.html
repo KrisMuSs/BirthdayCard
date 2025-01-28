@@ -92,29 +92,26 @@
       gap: 10px;
       width: 100%;
       color: #333333;
-      font-size: 16px; /* Уменьшен шрифт для кнопок */
+      font-size: 18px;
       font-weight: bold;
       margin-top: -10px;
-      padding: 8px 0; /* Уменьшены отступы */
+      padding: 10px 0;
       background-color: #cddae2;
     }
     .links a {
       text-decoration: none;
       color: #333333;
-      padding: 6px 14px; /* Уменьшенные отступы для кнопок */
-      border-radius: 20px; /* Более округлая форма */
-      border: 2px solid white; /* Белая обводка */
-      transition: background-color 0.3s, color 0.3s;
+      padding: 0 10px;
+      white-space: nowrap;
+      overflow: visible;
+      transition: color 0.3s;
     }
     .links a:hover {
-      background-color: #FDDA86; /* Цвет фона при наведении */
-      color: white; /* Белый цвет текста при наведении */
+      color: #FDDA86;
     }
     .links a.inactive {
-      pointer-events: none; /* Ссылка не кликабельна */
+      pointer-events: none;
       color: #333333;
-      background-color: #cccccc; /* Серый фон для неактивной ссылки */
-      border: 2px solid #b3b3b3; /* Более темная граница для неактивной ссылки */
     }
     @keyframes fadeIn {
       to {
@@ -125,8 +122,7 @@
 
     @media (max-width: 480px) {
       .links a {
-        font-size: 14px; /* Еще меньше шрифт для мобильных устройств */
-        padding: 4px 10px; /* Уменьшение отступов для кнопок */
+        font-size: 14px;
       }
       .greeting {
         font-size: 16px;
@@ -150,7 +146,7 @@
     <div class="links">
       <a href="../otkrytka.html">Главное</a>
       <a href="../OneLink/View.html">Артем</a>
-      <a href="../SecondLink/View2.html" class="inactive">Света</a> <!-- Теперь Света неактивная с серым фоном -->
+      <a class="inactive" href="sveta.html">Света</a>
       <a href="../ThirdLink/View3.html">Паша</a>
       <a href="../FourthLink/View4.html">Родители</a>
     </div>

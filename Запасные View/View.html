@@ -110,10 +110,10 @@ box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
       align-items: center; /* Центрируем по вертикали */
       width: 100%;
       color: #333333; /* Цвет текста */
-      font-size: 15px; /* Уменьшен шрифт на 1px */
+      font-size: 18px;
       font-weight: bold;
       margin-top: -10px;
-      padding: 5px 0; /* Уменьшенные отступы */
+      padding: 10px 0;
       background-color: #FFEEC8; /* Цвет фона для ссылки */
       white-space: nowrap; /* Ссылки остаются в одну строку */
       overflow: visible; /* Позволяем тексту выходить за пределы */
@@ -121,21 +121,16 @@ box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
     .card .links a {
       text-decoration: none;
       color: #333333; /* Цвет текста */
-      padding: 5px 10px; /* Уменьшены отступы */
-      margin: 3px; /* Уменьшено расстояние между кнопками */
-      border-radius: 20px; /* Более округлая форма */
-      border: 2px solid white; /* Белая обводка */
-      transition: background-color 0.3s, color 0.3s;
+      padding: 5px;
+      margin: 5px; /* Отступы между ссылками */
+      transition: color 0.3s;
     }
     .card .links a:hover {
-      background-color: #FDDA86; /* Цвет фона при наведении */
-      color: white; /* Белый цвет текста при наведении */
+      color: #FDDA86; /* Цвет при наведении */
     }
     .card .links a.no-link {
       pointer-events: none; /* Отключаем взаимодействие с ссылкой */
       color: #333333; /* Ссылка остаётся того же цвета */
-      background-color: #cccccc; /* Серый фон для неактивной ссылки */
-      border: 2px solid #b3b3b3; /* Более темная граница для неактивной ссылки */
     }
     @keyframes fadeIn {
       to {

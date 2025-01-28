@@ -8,7 +8,7 @@
     body {
       margin: 0;
       padding: 0;
-      background-color: #bbbbc6; /* Цвет фона */
+      background-color: #f2d9ad; /* Цвет фона */
       display: flex;
       justify-content: center;
       align-items: flex-start;
@@ -18,19 +18,20 @@
     .card {
       width: 80%;
       max-width: 350px;
-      background-color: #d3c3df; /* Измененный цвет фона главного прямоугольника */
-      padding: 0; /* Убираем отступы */
+      background-color: #f9edd9; /* Белый прямоугольник */
+      padding: 20px 0;
       border-radius: 10px;
       margin-bottom: 20px;
       display: flex;
       flex-direction: column;
       align-items: center;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+
     }
     .line {
       width: 90%;
       height: 2px;
-      background-color: #bbbbc6; /* Тонкая линия цвета фона */
+      background-color: black; /* Тонкая линия цвета фона */
       margin: 10px 0;
     }
     .greeting {
@@ -44,7 +45,7 @@
     .divider {
       width: 100%;
       height: 25px;
-      background-color: #bbbbc6; /* Цвет разделителя */
+      background-color: #f2d9ad; /* Цвет разделителя */
       margin-top: 5px; /* Уменьшенный отступ сверху */
       margin-bottom: 15px; /* Увеличенный отступ снизу */
     }
@@ -64,35 +65,48 @@
       transform: scale(0.8);
       animation: fadeIn 1.5s ease forwards; /* Анимация появления */
     }
+    .image-group {
+      display: flex;
+      width: 100%;
+      margin-top: 20px;
+    }
+    .image-group img {
+      width: 33.33%; /* Каждая картинка занимает треть ширины */
+      height: auto; /* Пропорции сохраняются */
+      margin: 0; /* Убираем отступы */
+      border-radius: 0; /* Убираем скругления */
+      opacity: 0;
+      transform: scale(0.8);
+      animation: fadeIn 1.5s ease forwards;
+    }
     .links {
       display: flex;
       justify-content: center; /* Выравнивание по центру */
       gap: 10px; /* Расстояние между ссылками */
       width: 100%;
       color: #333333; /* Цвет текста */
-      font-size: 16px; /* Уменьшенный шрифт */
+      font-size: 18px;
       font-weight: bold;
       margin-top: -10px;
-      padding: 8px 0; /* Уменьшенные отступы для кнопок */
-      background-color: #bbbbc6; /* Цвет фона для ссылки изменен на общий фон */
+      padding: 10px 0;
+      background-color: #f2d9ad; /* Цвет фона для ссылки изменен на общий фон */
     }
     .links a {
       text-decoration: none;
       color: #333333; /* Цвет текста */
-      padding: 6px 14px; /* Уменьшенные отступы для кнопок */
-      border-radius: 20px; /* Более округлая форма */
-      border: 2px solid white; /* Белая обводка */
-      transition: background-color 0.3s, color 0.3s;
+      padding: 5px;
+      transition: color 0.3s;
+      white-space: nowrap; /* Запрещаем перенос текста */
+      position: relative; /* Разрешаем выход текста за пределы прямоугольника */
     }
     .links a:hover {
-      background-color: #FDDA86; /* Цвет фона при наведении */
-      color: white; /* Белый цвет текста при наведении */
+      color: #FDDA86; /* Цвет при наведении */
     }
-    .links .inactive {
-      pointer-events: none; /* Ссылка не кликабельна */
-      color: #333333;
-      background-color: #cccccc; /* Серый фон для неактивной ссылки */
-      border: 2px solid #b3b3b3; /* Более темная граница для неактивной ссылки */
+    /* Добавляем стиль для неосязаемой ссылки */
+    .links a.disabled {
+      pointer-events: none; /* Отключает взаимодействие с ссылкой */
+      color: #333333; /* Цвет как у остальных ссылок */
+      /* Убираем opacity, чтобы ссылка не была полупрозрачной */
     }
     @keyframes fadeIn {
       to {
@@ -104,8 +118,8 @@
     /* Медиазапросы для адаптации на мобильных устройствах */
     @media (max-width: 480px) {
       .card .links a {
-        font-size: 14px; /* Еще меньше шрифт для мобильных устройств */
-        padding: 4px 10px; /* Уменьшение отступов для кнопок */
+        font-size: 16px; /* Уменьшение шрифта для мобильных устройств */
+        padding: 4px; /* Уменьшение отступа для ссылок */
       }
       .greeting {
         font-size: 16px; /* Уменьшение шрифта приветствия */
@@ -124,21 +138,22 @@
     <img src="HappyBirthday.jpg" alt="Happy Birthday">
     <div class="line"></div> <!-- Тонкая линия под картинкой -->
     <div class="greeting">
-      🥳 КРИСТИНА, С ПРАЗДНИКОМ! 🎉 ЖЕЛАЕМ ОЧЕНЬ МНОГО СЧАСТЬЯ И ТЕПЛЫХ МОМЕНТОВ! 💕
+      🎂 КРИСТИНА, С ДНЁМ РОЖДЕНИЯ! 🎈 ПУСТЬ УЛЫБКИ И РАДОСТЬ БУДУТ ВСЕГДА! 💖🎉
     </div>
     <div class="divider"></div> <!-- Прямоугольник-разделитель -->
     <div class="links">
       <a href="../otkrytka.html">Главное</a> <!-- Ссылка на otkrytka.html -->
       <a href="../OneLink/View.html">Артем</a> <!-- Ссылка на файл View.html -->
       <a href="../SecondLink/View2.html">Света</a> <!-- Ссылка на View2.html -->
-      <a href="#" class="inactive">Паша</a> <!-- Ссылка Паша неактивна с серым фоном -->
-      <a href="../FourthLink/View4.html">Родители</a> <!-- Ссылка на View4.html для родителей -->
+      <a href="../ThirdLink/View3.html">Паша</a> <!-- Ссылка на View3.html -->
+      <a href="../FourthLink/View4.html" class="disabled">Родители</a> <!-- Ссылка "Родители" с классом disabled -->
     </div> <!-- Ссылки для перехода на другие страницы -->
     <video src="Video1.mp4" controls></video> <!-- Видео -->
-    <div style="background-color: #3c2c4c; width: 100%; display: flex; flex-direction: column; align-items: center; padding: 0 0 20px 0;">
-      <img src="Сloud.png" alt="Cloud"> <!-- Картинка с измененным фоном -->
-      <img src="Flower.png" alt="Flower" style="width: 50px; height: auto; background-color: #3c2c4c; margin-top: 20px;"> <!-- Маленькая картинка с фоном -->
-    </div>
+    <div class="image-group">
+      <img src="Birthday1.png" alt="Flower1">
+      <img src="Birthday2.png" alt="Flower2">
+      <img src="Birthday3.png" alt="Flower3">
+    </div> <!-- Группа картинок без отступов -->
   </div>
 </body>
 </html>

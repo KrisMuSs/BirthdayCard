@@ -25,6 +25,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     }
     .line {
       width: 90%;
@@ -51,6 +52,9 @@
       max-width: 90%;
       height: auto;
       margin-top: 20px;
+      margin-bottom: 20px; /* Добавлен отступ снизу */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+      border-radius: 5px;
     }
     .card img {
       width: 100%; /* Картинка занимает всю ширину контейнера */
@@ -80,26 +84,29 @@
       gap: 10px; /* Расстояние между ссылками */
       width: 100%;
       color: #333333; /* Цвет текста */
-      font-size: 18px;
+      font-size: 16px; /* Уменьшенный шрифт для кнопок */
       font-weight: bold;
       margin-top: -10px;
-      padding: 10px 0;
+      padding: 8px 0; /* Уменьшенные отступы для кнопок */
       background-color: #bbbbc6; /* Цвет фона для ссылки изменен на общий фон */
     }
     .links a {
       text-decoration: none;
       color: #333333; /* Цвет текста */
-      padding: 5px;
-      transition: color 0.3s;
-      white-space: nowrap; /* Запрещаем перенос текста */
-      position: relative; /* Разрешаем выход текста за пределы прямоугольника */
+      padding: 6px 14px; /* Уменьшенные отступы для кнопок */
+      border-radius: 20px; /* Более округлая форма */
+      border: 2px solid white; /* Белая обводка */
+      transition: background-color 0.3s, color 0.3s;
     }
     .links a:hover {
-      color: #FDDA86; /* Цвет при наведении */
+      background-color: #FDDA86; /* Цвет фона при наведении */
+      color: white; /* Белый цвет текста при наведении */
     }
     .links .disabled {
-      pointer-events: none; /* Делаем ссылку не кликабельной */
-      color: #333333; /* Цвет ссылки такой же, как у остальных */
+      pointer-events: none; /* Ссылка не кликабельна */
+      color: #333333;
+      background-color: #cccccc; /* Серая кнопка для Артема */
+      border: 2px solid #b3b3b3; /* Более темная граница для неактивной ссылки */
     }
     @keyframes fadeIn {
       to {
@@ -111,8 +118,8 @@
     /* Медиазапросы для адаптации на мобильных устройствах */
     @media (max-width: 480px) {
       .card .links a {
-        font-size: 16px; /* Уменьшение шрифта для мобильных устройств */
-        padding: 4px; /* Уменьшение отступа для ссылок */
+        font-size: 14px; /* Еще меньше шрифт для мобильных устройств */
+        padding: 4px 10px; /* Уменьшение отступов для кнопок */
       }
       .greeting {
         font-size: 16px; /* Уменьшение шрифта приветствия */
@@ -136,7 +143,7 @@
     <div class="divider"></div> <!-- Прямоугольник-разделитель -->
     <div class="links">
       <a href="../otkrytka.html">Главное</a> <!-- Ссылка на otkrytka.html -->
-      <a href="#" class="disabled">Артем</a> <!-- Неактивная ссылка на Артема -->
+      <a href="#" class="disabled">Артем</a> <!-- Серая неактивная ссылка на Артема -->
       <a href="../SecondLink/View2.html">Света</a> <!-- Ссылка на View2.html -->
       <a href="../ThirdLink/View3.html">Паша</a> <!-- Ссылка на View3.html -->
       <a href="../FourthLink/View4.html">Родители</a> <!-- Ссылка на View4.html -->
