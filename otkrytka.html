@@ -8,17 +8,17 @@
     body {
       margin: 0;
       padding: 0;
-      background-color: #FFDB8B;
+      background-color: #FFEEC8; /* Цвет фона */
       display: flex;
       justify-content: center;
       align-items: flex-start;
       height: 100vh;
-      overflow-y: auto; /* Добавлен скроллинг */
+      overflow-y: auto; /* Скроллинг */
     }
     .card {
       width: 80%;
       max-width: 350px;
-      background-color: #1E1E1E;
+      background-color: #333333; /* Цвет прямоугольника */
       background-image: url("Confetti.gif");
       background-size: cover;
       background-position: center;
@@ -41,8 +41,29 @@
       margin-top: 20px;
       animation-delay: 0.3s;
     }
+    .line {
+      width: 90%;
+      height: 2px;
+      background-color: #FFEEC8; /* Тонкая линия цвета фона */
+      margin: 10px 0; /* Отступы сверху и снизу */
+    }
+    .greeting {
+      color: #FDDA86; /* Цвет текста */
+      font-size: 18px;
+      font-weight: bold;
+      text-align: center;
+      margin: 10px 0;
+      padding: 0 10px;
+    }
+    .divider {
+      width: 100%;
+      height: 25px; /* Уменьшена высота разделителя */
+      background-color: #FFEEC8; /* Цвет разделителя */
+      margin-top: 5px; /* Уменьшен отступ сверху */
+      margin-bottom: 15px; /* Увеличен отступ снизу */
+    }
     .card img:nth-child(2) { /* Фото именинницы */
-      margin-top: 15px; /* Отступ между картинками */
+      margin-top: 10px; /* Отступ между элементами */
       animation-delay: 0.6s;
       border-radius: 10px;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
@@ -50,7 +71,7 @@
     .card img:nth-child(3), .card img:nth-child(5) { /* Стрелки */
       margin-top: 20px;
       animation-delay: 0.9s;
-      width: 50px; /* Фиксированный размер стрелки */
+      width: 50px; /* Размер стрелки */
       height: auto;
     }
     .card img:nth-child(5) {
@@ -77,7 +98,26 @@
       transform: scale(0.8);
       animation: fadeIn 1.5s ease forwards;
       margin-top: 20px;
-      margin-bottom: 20px;
+    }
+    .card .links {
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+      color: #333333; /* Цвет текста */
+      font-size: 18px;
+      font-weight: bold;
+      margin-top: -10px;
+      padding: 10px 0;
+      background-color: #FFEEC8; /* Цвет фона для ссылки */
+    }
+    .card .links a {
+      text-decoration: none;
+      color: #333333; /* Цвет текста */
+      padding: 5px;
+      transition: color 0.3s;
+    }
+    .card .links a:hover {
+      color: #FDDA86; /* Цвет при наведении */
     }
     @keyframes fadeIn {
       to {
@@ -89,9 +129,24 @@
 </head>
 <body>
   <div class="card">
+    <img src="FontKristina.png" alt="Font Kristina"> <!-- Изображение FontKristina -->
     <img src="HappyBirthday.jpg" alt="Happy Birthday">
-    <img src="Kristina1.png" alt="Именинница">
-    <video src="Video1.mp4" controls></video> <!-- Видео после фото Kristina1 -->
+    <div class="line"></div> <!-- Тонкая линия под картинкой HappyBirthday -->
+    <div class="greeting">
+      С ДНЁМ РОЖДЕНИЯ, КРИСТИНА! ПУСТЬ ЖИЗНЬ БУДЕТ ВЕСЁЛОЙ И ЯРКОЙ! 🌟
+    </div>
+    <div style="margin-top: 10px;"></div> <!-- Уменьшен отступ после greeting -->
+    <div class="divider"></div> <!-- Прямоугольник-разделитель с уменьшенным отступом сверху -->
+    <div class="links">
+      <a href="main.html">Главное</a> <!-- Ссылка на главное -->
+      <a href="OneLink/View.html">Артем</a> <!-- Ссылка на файл View.html -->
+      <a href="sveta.html">Света</a>
+      <a href="pasha.html">Паша</a>
+      <a href="roditeli.html">Родители</a>
+    </div> <!-- Ссылки для перехода на другие страницы -->
+    <video src="Video1.mp4" controls></video> <!-- Видео теперь выше -->
+    <img src="Kristina1.png" alt="Именинница" style="margin-top: 20px;"> <!-- Фото именинницы с отступом -->
+    <div style="margin-top: 20px;"></div> <!-- Отступ после фото именинницы -->
     <img src="Strelka.png" alt="Стрелка вниз 1">
     <div class="message">МЫ ТЕБЯ ЛЮБИМ!</div>
     <img src="Strelka.png" alt="Стрелка вниз 2">
