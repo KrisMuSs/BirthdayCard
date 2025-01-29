@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Поздравление для Кристины</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #FEEA99; /* Цвет фона */
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      height: 100vh;
+      overflow-y: auto; /* Скроллинг */
+    }
+    .card {
+      width: 80%;
+      max-width: 350px;
+      background-color: #3a65a7; /* Белый прямоугольник */
+      padding: 20px 0;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+    .line {
+      width: 90%;
+      height: 2px;
+      background-color: white; /* Тонкая линия цвета фона */
+      margin: 10px 0;
+    }
+    .greeting {
+      color: #FEC299; /* Новый цвет текста */
+      font-size: 18px;
+      font-weight: bold;
+      text-align: center;
+      margin: 10px 0;
+      padding: 0 10px;
+    }
+    .divider {
+      width: 100%;
+      height: 25px;
+      background-color: #FEEA99; /* Цвет разделителя */
+      margin-top: 5px; /* Уменьшенный отступ сверху */
+      margin-bottom: 15px; /* Увеличенный отступ снизу */
+    }
+    video {
+      max-width: 90%;
+      height: auto;
+      margin-top: 20px;
+      margin-bottom: 20px; /* Добавлен отступ снизу */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+      border-radius: 5px;
+    }
+    .card img {
+      width: 100%; /* Картинка занимает всю ширину контейнера */
+      height: auto; /* Пропорции сохраняются */
+      border-radius: 10px; /* Добавляем скругленные углы */
+      opacity: 0;
+      transform: scale(0.8);
+      animation: fadeIn 1.5s ease forwards; /* Анимация появления */
+    }
+    .image-group {
+      display: flex;
+      width: 100%;
+      margin-top: 20px;
+    }
+    .image-group img {
+      width: 33.33%; /* Каждая картинка занимает треть ширины */
+      height: auto; /* Пропорции сохраняются */
+      margin: 0; /* Убираем отступы */
+      border-radius: 0; /* Убираем скругления */
+      opacity: 0;
+      transform: scale(0.8);
+      animation: fadeIn 1.5s ease forwards;
+    }
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center; /* Центрирует кнопки */
+      gap: 8px; /* Расстояние между кнопками */
+      width: 95%; /* Ограничиваем ширину, чтобы не выходили за рамки */
+      color: #333333;
+      font-size: 14px;
+      font-weight: bold;
+      margin-top: -10px;
+      padding: 8px 10px; /* Добавляем боковые отступы */
+      background-color: #FEEA99;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+    .links a {
+      text-decoration: none;
+      color: #333333;
+      padding: 6px 12px;
+      border-radius: 20px;
+      border: 2px solid white;
+      font-size: 14px;
+      font-weight: bold;
+      text-align: center;
+      white-space: nowrap; /* Запрет переноса текста */
+      transition: background-color 0.3s, color 0.3s;
+    }
+    .links a:hover {
+      background-color: #FDDA86;
+      color: white;
+    }
+    .links .disabled {
+      pointer-events: none; /* Ссылка не кликабельна */
+      color: #333333;
+      background-color: #cccccc; /* Серая кнопка для Артема */
+      border: 2px solid #b3b3b3; /* Более темная граница для неактивной ссылки */
+    }
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+    /* Медиазапросы для адаптации на мобильных устройствах */
+    @media (max-width: 480px) {
+      .card .links a {
+        font-size: 14px; /* Еще меньше шрифт для мобильных устройств */
+        padding: 4px 10px; /* Уменьшение отступов для кнопок */
+      }
+      .greeting {
+        font-size: 16px; /* Уменьшение шрифта приветствия */
+      }
+      .card {
+        padding: 15px 0; /* Уменьшение отступов в карточке */
+      }
+      .card .message {
+        font-size: 20px; /* Уменьшение шрифта сообщения */
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <img src="HappyBirthday.jpg" alt="Happy Birthday">
+    <div class="line"></div> <!-- Тонкая линия под картинкой -->
+    <div class="greeting">
+      Дорогая внучечка, с каждым годом ты становишься только прекрасней! Пусть будет счастье в каждом шаге.
+    </div>
+    <div class="divider"></div> <!-- Прямоугольник-разделитель -->
+    <div class="links">
+      <a href="../otkrytka.html">Главное</a>
+      <a href="../OneLink/View.html">Артем</a>
+      <a href="../SecondLink/View2.html">Света</a>
+      <a href="../ThirdLink/View3.html">Паша</a>
+      <a href="../FourthLink/View4.html">Родители</a>
+      <a href="#" class="disabled">Дедушка</a>
+      <a href="../SixthLink/View6.html">Ида</a>
+    </div>
+    <video src="Video1.mp4" controls></video> <!-- Видео -->
+    <div class="image-group">
+      <img src="Cute5.gif" alt="Cute1">
+      <img src="Cute4.gif" alt="Cute2">
+      <img src="Cute6.gif" alt="Cute3">
+    </div> <!-- Группа картинок без отступов -->
+  </div>
+</body>
+</html>

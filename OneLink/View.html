@@ -78,30 +78,38 @@
       transform: scale(0.8);
       animation: fadeIn 1.5s ease forwards;
     }
-    .links {
-      display: flex;
-      justify-content: center; /* Выравнивание по центру */
-      gap: 10px; /* Расстояние между ссылками */
-      width: 100%;
-      color: #333333; /* Цвет текста */
-      font-size: 16px; /* Уменьшенный шрифт для кнопок */
-      font-weight: bold;
-      margin-top: -10px;
-      padding: 8px 0; /* Уменьшенные отступы для кнопок */
-      background-color: #bbbbc6; /* Цвет фона для ссылки изменен на общий фон */
-    }
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Центрирует кнопки */
+  gap: 8px; /* Расстояние между кнопками */
+  width: 95%; /* Ограничиваем ширину, чтобы не выходили за рамки */
+  color: #333333;
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: -10px;
+  padding: 8px 10px; /* Добавляем боковые отступы */
+  background-color: #bbbbc6;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
     .links a {
       text-decoration: none;
-      color: #333333; /* Цвет текста */
-      padding: 6px 14px; /* Уменьшенные отступы для кнопок */
-      border-radius: 20px; /* Более округлая форма */
-      border: 2px solid white; /* Белая обводка */
+      color: #333333;
+      padding: 6px 12px;
+      border-radius: 20px;
+      border: 2px solid white;
+      font-size: 14px;
+      font-weight: bold;
+      text-align: center;
+      white-space: nowrap; /* Запрет переноса текста */
       transition: background-color 0.3s, color 0.3s;
     }
     .links a:hover {
-      background-color: #FDDA86; /* Цвет фона при наведении */
-      color: white; /* Белый цвет текста при наведении */
+      background-color: #FDDA86;
+      color: white;
     }
+
     .links .disabled {
       pointer-events: none; /* Ссылка не кликабельна */
       color: #333333;
@@ -142,13 +150,15 @@
     </div>
     <div class="divider"></div> <!-- Прямоугольник-разделитель -->
     <div class="links">
-      <a href="../otkrytka.html">Главное</a> <!-- Ссылка на otkrytka.html -->
-      <a href="#" class="disabled">Артем</a> <!-- Серая неактивная ссылка на Артема -->
-      <a href="../SecondLink/View2.html">Света</a> <!-- Ссылка на View2.html -->
-      <a href="../ThirdLink/View3.html">Паша</a> <!-- Ссылка на View3.html -->
-      <a href="../FourthLink/View4.html">Родители</a> <!-- Ссылка на View4.html -->
-    </div> <!-- Ссылки для перехода на другие страницы -->
-    <video src="Video1.mp4" controls></video> <!-- Видео -->
+  <a href="../otkrytka.html">Главное</a>
+  <a href="#" class="disabled">Артем</a>
+  <a href="../SecondLink/View2.html">Света</a>
+  <a href="../ThirdLink/View3.html">Паша</a>
+  <a href="../FourthLink/View4.html">Родители</a>
+  <a href="../FifthLink/View5.html">Дедушка</a>
+  <a href="../SixthLink/View6.html">Ида</a>
+</div>
+    <video src="Video1.mov" controls></video> <!-- Видео -->
     <div class="image-group">
       <img src="Birthday3.png" alt="Flower1">
       <img src="Birthday1.png" alt="Flower2">

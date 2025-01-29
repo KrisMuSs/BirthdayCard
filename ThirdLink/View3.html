@@ -8,18 +8,18 @@
     body {
       margin: 0;
       padding: 0;
-      background-color: #bbbbc6; /* Цвет фона */
+      background-color: #bbbbc6;
       display: flex;
       justify-content: center;
       align-items: flex-start;
       height: 100vh;
-      overflow-y: auto; /* Скроллинг */
+      overflow-y: auto;
     }
     .card {
       width: 80%;
       max-width: 350px;
-      background-color: #d3c3df; /* Измененный цвет фона главного прямоугольника */
-      padding: 0; /* Убираем отступы */
+      background-color: #d3c3df;
+      padding: 0;
       border-radius: 10px;
       margin-bottom: 20px;
       display: flex;
@@ -30,11 +30,11 @@
     .line {
       width: 90%;
       height: 2px;
-      background-color: #bbbbc6; /* Тонкая линия цвета фона */
+      background-color: #bbbbc6;
       margin: 10px 0;
     }
     .greeting {
-      color: #3f3e56; /* Новый цвет текста */
+      color: #3f3e56;
       font-size: 18px;
       font-weight: bold;
       text-align: center;
@@ -44,55 +44,58 @@
     .divider {
       width: 100%;
       height: 25px;
-      background-color: #bbbbc6; /* Цвет разделителя */
-      margin-top: 5px; /* Уменьшенный отступ сверху */
-      margin-bottom: 15px; /* Увеличенный отступ снизу */
+      background-color: #bbbbc6;
+      margin-top: 5px;
+      margin-bottom: 15px;
     }
-    video {
-      max-width: 90%;
-      height: auto;
+    audio {
+      width: 80%;
       margin-top: 20px;
-      margin-bottom: 20px; /* Добавлен отступ снизу */
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-      border-radius: 5px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      background-color: #d3c3df;
+      border: 2px solid #d3c3df;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      padding: 5px;
     }
     .card img {
-      width: 100%; /* Картинка занимает всю ширину контейнера */
-      height: auto; /* Пропорции сохраняются */
-      border-radius: 10px; /* Добавляем скругленные углы */
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
       opacity: 0;
       transform: scale(0.8);
-      animation: fadeIn 1.5s ease forwards; /* Анимация появления */
+      animation: fadeIn 1.5s ease forwards;
+      margin-top: 0;
     }
     .links {
       display: flex;
-      justify-content: center; /* Выравнивание по центру */
-      gap: 10px; /* Расстояние между ссылками */
-      width: 100%;
-      color: #333333; /* Цвет текста */
-      font-size: 16px; /* Уменьшенный шрифт */
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px;
+      width: 95%;
+      color: #333333;
+      font-size: 14px;
       font-weight: bold;
       margin-top: -10px;
-      padding: 8px 0; /* Уменьшенные отступы для кнопок */
-      background-color: #bbbbc6; /* Цвет фона для ссылки изменен на общий фон */
+      padding: 8px 10px;
+      background-color: #bbbbc6;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     }
     .links a {
       text-decoration: none;
-      color: #333333; /* Цвет текста */
-      padding: 6px 14px; /* Уменьшенные отступы для кнопок */
-      border-radius: 20px; /* Более округлая форма */
-      border: 2px solid white; /* Белая обводка */
+      color: #333333;
+      padding: 6px 12px;
+      border-radius: 20px;
+      border: 2px solid white;
+      font-size: 14px;
+      font-weight: bold;
+      text-align: center;
+      white-space: nowrap;
       transition: background-color 0.3s, color 0.3s;
     }
     .links a:hover {
-      background-color: #FDDA86; /* Цвет фона при наведении */
-      color: white; /* Белый цвет текста при наведении */
-    }
-    .links .inactive {
-      pointer-events: none; /* Ссылка не кликабельна */
-      color: #333333;
-      background-color: #cccccc; /* Серый фон для неактивной ссылки */
-      border: 2px solid #b3b3b3; /* Более темная граница для неактивной ссылки */
+      background-color: #FDDA86;
+      color: white;
     }
     @keyframes fadeIn {
       to {
@@ -100,44 +103,33 @@
         transform: scale(1);
       }
     }
-
-    /* Медиазапросы для адаптации на мобильных устройствах */
-    @media (max-width: 480px) {
-      .card .links a {
-        font-size: 14px; /* Еще меньше шрифт для мобильных устройств */
-        padding: 4px 10px; /* Уменьшение отступов для кнопок */
-      }
-      .greeting {
-        font-size: 16px; /* Уменьшение шрифта приветствия */
-      }
-      .card {
-        padding: 15px 0; /* Уменьшение отступов в карточке */
-      }
-      .card .message {
-        font-size: 20px; /* Уменьшение шрифта сообщения */
-      }
-    }
   </style>
 </head>
 <body>
   <div class="card">
     <img src="HappyBirthday.jpg" alt="Happy Birthday">
-    <div class="line"></div> <!-- Тонкая линия под картинкой -->
+    <div class="line"></div>
     <div class="greeting">
       🥳 КРИСТИНА, С ПРАЗДНИКОМ! 🎉 ЖЕЛАЕМ ОЧЕНЬ МНОГО СЧАСТЬЯ И ТЕПЛЫХ МОМЕНТОВ! 💕
     </div>
-    <div class="divider"></div> <!-- Прямоугольник-разделитель -->
+    <div class="divider"></div>
     <div class="links">
-      <a href="../otkrytka.html">Главное</a> <!-- Ссылка на otkrytka.html -->
-      <a href="../OneLink/View.html">Артем</a> <!-- Ссылка на файл View.html -->
-      <a href="../SecondLink/View2.html">Света</a> <!-- Ссылка на View2.html -->
-      <a href="#" class="inactive">Паша</a> <!-- Ссылка Паша неактивна с серым фоном -->
-      <a href="../FourthLink/View4.html">Родители</a> <!-- Ссылка на View4.html для родителей -->
-    </div> <!-- Ссылки для перехода на другие страницы -->
-    <video src="Video1.mp4" controls></video> <!-- Видео -->
+      <a href="../otkrytka.html">Главное</a>
+      <a href="../OneLink/View.html">Артем</a>
+      <a href="../SecondLink/View2.html">Света</a>
+      <a href="#" class="inactive">Паша</a>
+      <a href="../FourthLink/View4.html">Родители</a>
+      <a href="../FifthLink/View5.html">Дедушка</a>
+      <a href="../SixthLink/View6.html">Ида</a>
+    </div>
+    <audio controls>
+      <source src="Audio.mp3" type="audio/mp3">
+      Ваш браузер не поддерживает аудио.
+    </audio>
+    <img src="Kristina1.png" alt="Kristina" style="width: 90%; height: auto; margin: 20px auto; display: block; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);"> 
     <div style="background-color: #3c2c4c; width: 100%; display: flex; flex-direction: column; align-items: center; padding: 0 0 20px 0;">
-      <img src="Сloud.png" alt="Cloud"> <!-- Картинка с измененным фоном -->
-      <img src="Flower.png" alt="Flower" style="width: 50px; height: auto; background-color: #3c2c4c; margin-top: 20px;"> <!-- Маленькая картинка с фоном -->
+      <img src="Сloud.png" alt="Cloud"> 
+      <img src="Flower.png" alt="Flower" style="width: 50px; height: auto; background-color: #3c2c4c; margin-top: 20px;"> 
     </div>
   </div>
 </body>

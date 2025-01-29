@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Поздравление для Кристины</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #D8F3B4; /* Цвет фона */
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      height: 100vh;
+      overflow-y: auto; /* Скроллинг */
+    }
+    .card {
+      width: 80%;
+      max-width: 350px;
+      background-color: white; /* Белый прямоугольник */
+      padding: 20px 0;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+    .line {
+      width: 90%;
+      height: 2px;
+      background-color: #bbbbc6; /* Тонкая линия цвета фона */
+      margin: 10px 0;
+    }
+    .greeting {
+      color: #3f3e56; /* Новый цвет текста */
+      font-size: 18px;
+      font-weight: bold;
+      text-align: center;
+      margin: 10px 0;
+      padding: 0 10px;
+    }
+    .divider {
+      width: 100%;
+      height: 25px;
+      background-color: #D8F3B4; /* Цвет разделителя */
+      margin-top: 5px; /* Уменьшенный отступ сверху */
+      margin-bottom: 15px; /* Увеличенный отступ снизу */
+    }
+    .card img {
+      width: 100%; /* Картинка занимает всю ширину контейнера */
+      height: auto; /* Пропорции сохраняются */
+      border-radius: 10px; /* Скругленные углы */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тень */
+      opacity: 0;
+      transform: scale(0.8);
+      animation: fadeIn 1.5s ease forwards; /* Анимация появления */
+    }
+    .main-image {
+      margin: 20px; /* Добавлен отступ вокруг картинки */
+    }
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center; /* Центрирует кнопки */
+      gap: 8px; /* Расстояние между кнопками */
+      width: 95%; /* Ограничиваем ширину, чтобы не выходили за рамки */
+      color: #333333;
+      font-size: 14px;
+      font-weight: bold;
+      margin-top: -10px;
+      padding: 8px 10px; /* Добавляем боковые отступы */
+      background-color: #D8F3B4;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .links a {
+      text-decoration: none;
+      color: #333333;
+      padding: 6px 12px;
+      border-radius: 20px;
+      border: 2px solid white;
+      font-size: 14px;
+      font-weight: bold;
+      text-align: center;
+      white-space: nowrap; /* Запрет переноса текста */
+      transition: background-color 0.3s, color 0.3s;
+    }
+    .links a:hover {
+      background-color: #FDDA86;
+      color: white;
+    }
+
+    .links .disabled {
+      pointer-events: none; /* Ссылка не кликабельна */
+      color: #333333;
+      background-color: #cccccc; /* Серая кнопка для Артема */
+      border: 2px solid #b3b3b3; /* Более темная граница для неактивной ссылки */
+    }
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    /* Медиазапросы для адаптации на мобильных устройствах */
+    @media (max-width: 480px) {
+      .card .links a {
+        font-size: 14px; /* Еще меньше шрифт для мобильных устройств */
+        padding: 4px 10px; /* Уменьшение отступов для кнопок */
+      }
+      .greeting {
+        font-size: 16px; /* Уменьшение шрифта приветствия */
+      }
+      .card {
+        padding: 15px 0; /* Уменьшение отступов в карточке */
+      }
+      .card .message {
+        font-size: 20px; /* Уменьшение шрифта сообщения */
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <img src="HappyBirthday.jpg" alt="Happy Birthday">
+    <div class="line"></div> <!-- Тонкая линия под картинкой -->
+    <div class="greeting">
+      Желаю счастья, здоровья и успехов во всём!
+    </div>
+    <div class="divider"></div> <!-- Прямоугольник-разделитель -->
+    <div class="links">
+      <a href="../otkrytka.html">Главное</a>
+      <a href="../OneLink/View.html">Артем</a>
+      <a href="../SecondLink/View2.html">Света</a>
+      <a href="../ThirdLink/View3.html">Паша</a>
+      <a href="../FourthLink/View4.html">Родители</a>
+      <a href="../FifthLink/View5.html">Дедушка</a>
+      <a href="#" class="disabled">Ида</a>
+    </div>
+    <img src="Main.png" alt="Поздравление" class="main-image"> <!-- Новая картинка с отступами -->
+  </div>
+</body>
+</html>
